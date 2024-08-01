@@ -1,0 +1,140 @@
+/* style4.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header .logo {
+    height: 40px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+header .btn-voltar {
+    background-color: #fff;
+    color: #4caf50;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.upload-section, .pontos-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.upload-section .upload-area {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px dashed #4caf50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #e0ffe0;
+}
+
+.upload-section .upload-area p {
+    margin: 0;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.upload-section button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.pontos-section #pontos {
+    font-size: 24px;
+    color: #4caf50;
+}
+
+.pontos-section #cupom {
+    margin-top: 20px;
+    background-color: #e0ffe0;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Estilo da animação de confetes */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confetti.hidden {
+    display: none;
+}
+
+#confetti-message {
+    font-size: 2em;
+    color: #4caf50;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de confetes */
+@keyframes confetti-fall {
+    0% { top: -10%; opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #4caf50;
+    animation: confetti-fall 3s linear infinite;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

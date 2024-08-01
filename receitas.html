@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação de Receitas - Agricultura Familiar</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Estilo para o botão Voltar */
+        .btn-voltar {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Cor azul do botão */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #0056b3; /* Cor azul mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o texto piscante */
+        .titulo-piscante {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            animation: piscar 1s infinite;
+            margin-top: 40px; /* Espaçamento acima do título piscante */
+            margin-bottom: 20px; /* Espaçamento abaixo do título piscante */
+        }
+
+        @keyframes piscar {
+            0%, 49% {
+                opacity: 1;
+            }
+            50%, 100% {
+                opacity: 0;
+            }
+        }
+
+        /* Estilo para o texto "Clique e confira" */
+        .clique-confira {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px; /* Espaçamento abaixo do texto "Clique e confira" */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo da Agricultura Familiar">
+        </div>
+        <h1>Receitas</h1>
+        <a href="index.html" class="btn-voltar">Voltar</a>
+    </header>
+
+    <main>
+        <section class="receitas">
+            <div class="receita">
+                <a href="receita.html">
+                    <img src="bolo.jpg" alt="Bolo de Banana">
+                    <h2>Bolo de Abóbora</h2>
+                </a>
+            </div>
+
+            <div class="receita">
+                <a href="receita2.html">
+                    <img src="imagem14.jpg" alt="Torta de Maçã">
+                    <h2>Bolo de Legumes</h2>
+                </a>
+            </div>
+            <div class="receita">
+                <a href="receita3.html">
+                    <img src="imagem15.jpg" alt="Torta de Maçã">
+                    <h2>Chips de batata</h2>
+                </a>
+            </div>
+        </section>
+
+        <div class="titulo-piscante">Clique e confira</div>
+        <p class="clique-confira">Explore mais receitas deliciosas dos nossos produtores clicando nas imagens acima.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FarmCity Connect.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finalização de Pedido</title>
+<link rel="stylesheet" href="style6.css">
+</head>
+<body>
+
+<div class="finalizacao-pedido">
+    <div class="cabecalho">
+        <h2>Finalização de Pedido</h2>
+    </div>
+    <div class="conteudo">
+        <!-- Formulário de Informações do Pedido -->
+        <form id="form-finalizacao">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="endereco">Endereço Completo:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <!-- Texto explicativo -->
+            <p class="texto-explicativo">Após finalizar a compra, o produtor irá até sua residência para entregar os pedidos e receber o pagamento. Por favor, esteja disponível no horário agendado para receber sua entrega.</p>
+
+            <!-- Campos de Seleção de Produtos -->
+            <div class="selecao-produtos">
+                <p>Selecione os Produtos:</p>
+                <label><input type="checkbox" name="produto" value="batata-roxa"> Batata Roxa</label><br>
+                <label><input type="checkbox" name="produto" value="tomate-comum"> Tomate Comum</label><br>
+                <label><input type="checkbox" name="produto" value="alface-crespa"> Alface Crespa</label><br>
+                <label><input type="checkbox" name="produto" value="abobora-moranga"> Abóbora Moranga</label><br>
+                <label><input type="checkbox" name="produto" value="geleia-abobora"> Geleias Artesanais</label><br>
+                <label><input type="checkbox" name="produto" value="pao-caseiro"> Pão Caseiro</label>
+            </div>
+
+            <!-- Campo para a quantidade de produtos -->
+            <div class="selecao">
+                <label for="quantidade">Quantidade de Produtos:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" max="100" required>
+            </div>
+
+            <!-- Campo para seleção do horário de entrega -->
+            <div class="selecao">
+                <label for="horario-entrega">Horário de Entrega:</label>
+                <select id="horario-entrega" name="horario-entrega" required>
+                    <option value="manha">Manhã (8h - 12h)</option>
+                    <option value="tarde">Tarde (12h - 18h)</option>
+                    <option value="noite">Noite (18h - 22h)</option>
+                </select>
+            </div>
+
+            <!-- Campo para seleção do método de pagamento -->
+            <div class="selecao">
+                <label for="metodo-pagamento">Método de Pagamento:</label>
+                <select id="metodo-pagamento" name="metodo-pagamento" required>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="transferencia">Transferência Bancária (Pix)</option>
+                </select>
+            </div>
+
+            <button type="submit">Finalizar Pedido</button>
+        </form>
+    </div>
+    <div class="rodape">
+        <a href="loja.html" onclick="voltar()">Voltar</a>
+    </div>
+</div>
+
+<!-- Div para a mensagem de parabéns -->
+<div id="parabens" class="parabens" style="display: none;">
+    <p>Compra Confirmada.
+    Aguarde a Chegada do Produtor com seus Pedidos</p>
+</div>
+
+<!-- Div para os confetes -->
+<div id="confetes" class="confetes" style="display: none;"></div>
+
+<script src="scripts22.js"></script>
+
+</body>
+</html>

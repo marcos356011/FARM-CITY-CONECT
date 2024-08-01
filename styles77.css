@@ -1,0 +1,86 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #4CAF50; /* Cor verde para o cabeçalho */
+    color: white;
+    border-bottom-left-radius: 10px; /* Borda arredondada na parte inferior esquerda */
+    border-bottom-right-radius: 10px; /* Borda arredondada na parte inferior direita */
+}
+
+/* Estilo para os botões no cabeçalho */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.back-button,
+.buy-now-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Cor verde para os botões */
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none; /* Remover a borda padrão */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover,
+.buy-now-button:hover {
+    background-color: #45a049; /* Cor verde um pouco mais escura ao passar o mouse */
+}
+
+.buy-now-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo para a seção de informações das fazendas */
+.farm-info {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: #4CAF50; /* Cor verde para o título da seção */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.farm-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.farm-section h3 {
+    color: #4CAF50; /* Cor verde para o título da fazenda */
+}
+
+.farm-section p {
+    text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction:
+        
+        

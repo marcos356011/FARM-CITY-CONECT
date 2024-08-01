@@ -1,0 +1,203 @@
+/* Reset básico para remover margin e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo geral */
+    margin: 0;
+}
+
+.header {
+    background-color: #2ecc71; /* Cor de fundo do cabeçalho */
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+}
+
+.btn-voltar {
+    background-color: #27ae60; /* Cor do botão Voltar */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrossel {
+    margin-top: 20px;
+    padding: 0 7px; /* Espaçamento de 7 pixels de cada lado */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Suporte para scroll suave em iOS */
+}
+
+.carousel-container {
+    display: flex;
+    flex-wrap: nowrap; /* Evita quebra de linha */
+}
+
+.carousel-container img {
+    flex: 0 0 auto;
+    width: calc(100% - 14px); /* Largura máxima menos o espaçamento dos lados */
+    height: auto; /* Altura automática para manter proporções */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 3px solid #ccc; /* Borda sólida de 3 pixels cinza (#ccc) */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar a imagem */
+}
+
+.ingredientes {
+    background-color: #ffffff; /* Cor de fundo da seção de ingredientes */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.titulo-verde {
+    color: #2ecc71; /* Cor verde para os títulos */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.lista-ingredientes {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lista-ingredientes li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.lista-ingredientes img {
+    width: 30px; /* Reduzir o tamanho das fotos pequenas de ingredientes */
+    height: 30px; /* Manter proporção quadrada */
+    margin-right: 10px; /* Espaçamento entre a foto e o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.lista-ingredientes span {
+    font-size: 18px;
+}
+
+.modo-de-fazer {
+    background-color: #ffffff; /* Cor de fundo da seção do modo de fazer */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.produtor {
+    background-color: #ffffff; /* Cor de fundo da seção do produtor */
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.info-produtor {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir quebra de linha em telas menores */
+}
+
+.info-produtor img {
+    width: 80px; /* Tamanho da foto do produtor */
+    height: 80px; /* Altura da foto do produtor */
+    border-radius: 50%; /* Para deixar a foto redonda */
+    margin-right: 20px;
+}
+
+.descricao-produtor {
+    flex: 1;
+}
+
+.rodape {
+    background-color: #2ecc71; /* Cor de fundo do rodapé */
+    padding: 5px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media queries para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .finalizacao-pedido {
+        padding: 15px;
+    }
+
+    .ingredientes, .modo-de-fazer, .produtor {
+        padding: 15px;
+    }
+
+    .titulo-verde {
+        font-size: 20px;
+    }
+
+    .btn-voltar {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 60px; /* Ajuste o tamanho conforme necessário */
+    }
+
+    .info-produtor img {
+        width: 60px; /* Tamanho da foto do produtor */
+        height: 60px; /* Altura da foto do produtor */
+        margin-right: 10px;
+    }
+
+    .descricao-produtor {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-voltar {
+        margin-top: 10px;
+    }
+
+    .carousel-container img {
+        width: 100%; /* Largura máxima */
+    }
+
+    .titulo-verde {
+        font-size: 18px;
+    }
+
+    .btn-voltar {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 50px; /* Ajuste o tamanho conforme necessário */
+    }
+
+    .info-produtor img {
+        width: 50px; /* Tamanho da foto do produtor */
+        height: 50px; /* Altura da foto do produtor */
+        margin-right: 5px;
+    }
+
+    .descricao-produtor {
+        font-size: 12px;
+    }
+}

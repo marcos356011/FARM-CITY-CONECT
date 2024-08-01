@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Campo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <img src="lojavirtual.png" alt="Logo da Raízes do Campo" class="logo">
+            <h1>Raízes do Campo</h1>
+        </div>
+        <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+        <a href="#" class="back-btn" id="back-btn" style="display: none;"></a>
+    </header>
+
+    <!-- Menu Hambúrguer -->
+    <nav id="menu">
+        <a href="receita.html">Receitas</a>
+        <a href="mapa.html">Mapa</a>
+        <a href="produtores.html">Produtores</a>
+        <a href="index.html">Início</a>
+    </nav>
+
+    <!-- Título Nossos Produtos -->
+    <h2 class="blinking-title">Nossos Produtos</h2>
+    <!-- Texto Informativo -->
+    <p class="informativo">Aqui você pode conferir os produtos disponíveis e conhecer um pouco mais sobre nossos serviços. Clique no produto e confira!</p>
+
+    <!-- Grade de Produtos -->
+    <main>
+        <!-- Produto 1 -->
+        <div class="produto">
+            <a href="detalhes4.html">
+                <img src="imagem9.jpg" alt="Produto 1" onclick="openDescription('produto1')">
+                <p>Batata Roxa</p>
+            </a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto">
+            <a href="detalhes1.html">
+                <img src="imagem8.png" alt="Produto 2">
+                <p>Tomate Comum</p>
+            </a>
+        </div>
+        
+        <!-- Produto 3 -->
+        <div class="produto">
+            <a href="detalhes2.html">
+                <img src="imagem6.jpg" alt="Produto 3">
+                <p>Alface Crespa</p>
+            </a>
+        </div>
+        
+        <!-- Produto 4 -->
+        <div class="produto">
+            <a href="detalhes.html">
+                <img src="imagem22.jpg" alt="Produto 4">
+                <p>Abóbora Moranga</p>
+            </a>
+        </div>
+        
+        <!-- Produto 5 -->
+        <div class="produto">
+            <a href="detalhes6.html">
+                <img src="imagem11.jpg" alt="Produto 5">
+                <p>Geleias Artesanais</p>
+            </a>
+        </div>
+        
+        <!-- Produto 6 -->
+        <div class="produto">
+            <a href="detalhes3.html">
+                <img src="imagem12.jpg" alt="Produto 6">
+                <p>Pão Caseiro</p>
+            </a>
+        </div>
+    </main>
+
+    <div id="produto1" class="descricao-produto" style="display: none;">
+        <!-- Conteúdo da Descrição do Produto 1 -->
+    </div>
+
+    <div id="produto2" class="descricao-produto" style="display: none;">
+        <!-- Conteúdo da Descrição do Produto 2 -->
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

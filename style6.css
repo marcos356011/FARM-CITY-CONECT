@@ -1,0 +1,178 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo geral */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Adicionado padding para evitar que o conteúdo encoste nas bordas em telas pequenas */
+}
+
+.finalizacao-pedido {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Largura máxima para telas grandes */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra suave */
+}
+
+.cabecalho {
+    text-align: center;
+    color: white; /* Cor do texto do cabeçalho */
+}
+
+.conteudo {
+    margin-top: 10px;
+}
+
+.conteudo label {
+    display: block;
+    margin-bottom: 5px;
+    color: white; /* Cor do texto dos labels */
+}
+
+.conteudo input[type="text"],
+.conteudo input[type="number"],
+.conteudo select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.conteudo button {
+    background-color: #ffffff; /* Cor de fundo branca */
+    color: #4CAF50; /* Cor do texto verde */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+.conteudo button:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+.rodape {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rodape a {
+    color: white; /* Cor do texto do link */
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline; /* Efeito de sublinhado no hover */
+}
+
+/* Estilos para o texto explicativo */
+.texto-explicativo {
+    color: #ffffff; /* Cor branca */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra para melhor legibilidade */
+}
+
+/* Estilos para os campos de seleção */
+.selecao {
+    margin-bottom: 20px;
+}
+
+.selecao label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.selecao select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Estilos para o botão de finalizar pedido */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para o rodapé */
+.rodape {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a mensagem de parabéns */
+#parabens {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Estilos para os confetes */
+#confetes {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.confete {
+    width: 10px;
+    height: 10px;
+    background-color: #e6e6e6; /* Cor dos confetes */
+    position: absolute;
+    top: -20px;
+    animation

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo - Produtores Rurais em Pinhal de São Bento, PR</title>
+    <link rel="stylesheet" href="styles77.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Estilo para o mapa */
+        #map {
+            height: 400px; /* Altura ajustada para o mapa */
+            margin: 20px auto; /* Centralizar e adicionar margem */
+            max-width: 90%; /* Limitar a largura máxima */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mapa Interativo</h1>
+        <div class="header-buttons">
+            <div class="back-button">Voltar</div>
+            <div class="buy-now-button"><a href="loja.html">Compre Agora</a></div>
+        </div>
+    </header>
+
+    <!-- Seção com informações das fazendas -->
+    <div class="farm-info">
+        <h2>Fazendas e Produção com Agricultura Familiar</h2>
+
+        <div class="farm-section">
+            <h3 class="section-title">Fazenda Borogodó's Pumpkins</h3>
+            <p>A Fazenda Borogodó's Pumpkins é famosa por suas abóboras morangas, além de cultivar abóboras de outras variedades. Otacílio Borogodó cultiva suas abóboras com técnicas tradicionais e um amor profundo pela terra, garantindo frescor e qualidade excepcionais.</p>
+        </div>
+
+        <div class="farm-section">
+            <h3 class="section-title">Fazenda Sabor do Campo</h3>
+            <p>Na Fazenda Sabor do Campo, a família Rupp se dedica à produção de uma ampla variedade de vegetais frescos. Entre seus principais produtos estão tomates, alfaces e cenouras, todos cultivados com práticas sustentáveis que respeitam o meio ambiente.</p>
+        </div>
+
+        <div class="farm-section">
+            <h3 class="section-title">Fazenda Vida Esperança</h3>
+            <p>A Fazenda Vida Esperança, administrada pela família Haberkorn, é conhecida por sua produção de alfaces e outros vegetais saudáveis. Alfaces crespas são cultivadas com métodos que promovem a biodiversidade e a fertilidade do solo.</p>
+        </div>
+
+        <div class="farm-section">
+            <h3 class="section-title">Fazenda Verde Vida</h3>
+            <p>A Fazenda Verde Vida, além de sua produção de leite e queijos artesanais, também se destaca pelo cultivo de batata-doce roxa e branca. Realizada de maneira ética e sustentável, complementada pela diversificação agrícola.</p>
+        </div>
+
+        <div class="farm-section">
+            <h3 class="section-title">Fazenda Horizonte Verde</h3>
+            <p>Gerida pela família Silva, a Fazenda Horizonte Verde é especializada em geleias artesanais. Eles produzem geleias de vários sabores, utilizando técnicas que preservam a qualidade do produto e promovem a sustentabilidade agrícola.</p>
+        </div>
+
+        <div class="farm-section">
+            <h3 class="section-title">Fazenda Flor da Terra</h3>
+            <p>Localizada nos arredores de Pinhal de São Bento, a Fazenda Flor da Terra é conhecida por suas flores e seu pão artesanal caseiro. A família Meireles cultiva uma grande variedade de trigo para farinha, usado na fabricação de pães que são vendidos em mercados locais e regionais.</p>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Inicializar o mapa com foco em Pinhal de São Bento, PR
+        var map = L.map('map').setView([-26.032423, -53.482891], 13);
+
+        // Adicionar a camada do mapa (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Array com as informações das fazendas
+        var fazendas = [
+            { nome: "Fazenda Borogodó's Pumpkins", coords: [-26.032423, -53.482891] },
+            { nome: "Fazenda Sabor do Campo", coords: [-26.037423, -53.487891] },
+            { nome: "Fazenda Vida Esperança", coords: [-26.027423, -53.477891] },
+            { nome: "Fazenda Verde Vida", coords: [-26.042423, -53.472891] },
+            { nome: "Fazenda Horizonte Verde", coords: [-26.035000, -53.485000] },
+            { nome: "Fazenda Flor da Terra", coords: [-26.040000, -53.490000] }
+        ];
+
+        // Adicionar marcadores para cada fazenda no mapa
+        fazendas.forEach(fazenda => {
+            L.marker(fazenda.coords).addTo(map)
+                .bindPopup(fazenda.nome)
+                .openPopup();
+        });
+
+        // Redirecionamento para a página loja.html quando clicar no botão Voltar
+        document.querySelector('.back-button').addEventListener('click', () => {
+            window.location.href = 'loja.html';
+        });
+
+        // Redirecionamento para finalizar.html já está configurado no botão Compre Agora
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação - Agricultor Familiar</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <img src="logo.png" alt="Logo da Empresa" class="logo">
+        <h1>Interação com Agricultores Familiares</h1>
+        <button class="btn-voltar" onclick="window.history.back();">Voltar</button>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="upload-section">
+            <h2>Envie sua Foto</h2>
+            <p>Envie uma foto com um produto da agricultura familiar e ganhe pontos para descontos.</p>
+            <div class="upload-area" onclick="triggerUpload()">
+                <input type="file" id="upload" accept="image/*" onchange="fileSelected()" style="display: none;">
+                <p>Clique aqui para selecionar uma foto</p>
+            </div>
+            <button onclick="uploadPhoto()">Enviar Foto</button>
+            <button onclick="window.location.href='galeria.html';">Ver Galeria</button>
+        </section>
+        
+        <section class="pontos-section">
+            <h2>Seus Pontos: <span id="pontos">0</span></h2>
+            <div id="cupom" class="hidden">
+                <p>Parabéns! Você ganhou um cupom de desconto de 10 reais!</p>
+                <p>Use o código: <strong>DESCONTO10</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Animação de Confetes -->
+    <div id="confetti" class="hidden"></div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Agricultor Familiar. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script33.js"></script>
+</body>
+</html>

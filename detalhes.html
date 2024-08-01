@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Estilos adicionais */
+        .back-button {
+            color: blue; /* Cor de destaque */
+            cursor: pointer; /* Mudar cursor para indicar que é clicável */
+        }
+        .buy-now-button a {
+            text-decoration: underline; /* Sublinhado */
+            color: inherit; /* Herdar cor do botão */
+        }
+        .buy-now-button {
+            cursor: pointer; /* Mudar cursor para indicar que é clicável */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Raízes do Campo</div>
+        <div class="back-button">Voltar</div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="product-name"> ABÓBORA MORANGA 6 KG </h1>
+
+        <div class="carousel">
+            <img src="imagem22.jpg" alt="Imagem1" class="carousel-image">
+            <img src="imagem17.jpg" alt="Imagem 17" class="carousel-image">
+            <img src="imagem5.png" alt="Imagem 3" class="carousel-image">
+        </div>
+
+        <p class="price">R$ 35,94 </p>
+
+        <button class="buy-now-button"><a href="finalizar.html">Compre Agora</a></button>
+
+        <section class="product-info">
+            <h2>Informações do Produto</h2>
+            <p>Esta abóbora de 6 kg é 100% proveniente da agricultura familiar, garantindo frescor e qualidade excepcionais. Ideal para sopas, purês e assados, sua polpa rica e saborosa é cultivada com cuidado por pequenos produtores. </p>
+        </section>
+
+        <section class="producer-info">
+            <img src="produtor1.png" alt="Produtor" class="producer-image">
+            <div class="producer-text">
+                <h2>Otacílio Borogodó</h2>
+                <p>Otacílio Borogodó é um excêntrico produtor de abóboras. Sua fazenda, "Borogodó's Pumpkins", Para Otacílio, cada abóbora é uma obra de arte e fruto de seu amor pela terra.</p>
+            </div>
+        </section>
+
+        <section class="nutrition-table">
+            <h2>Tabela Nutricional</h2>
+            <img src="ABOBORA.png" alt="Tabela Nutricional." class="nutrition-image">
+        </section>
+
+        <section class="ingredients">
+            <h2>Ingredientes</h2>
+            <p>-Água: Constitui cerca de 90% do peso da abóbora moranga.
+            <p>- Carboidratos: Inclui açúcares e amido, principais fontes de energia.</p>
+            <p>- Fibras: Contribuem para a saúde digestiva e regulagem do colesterol.</p>
+            <p>- Vitaminas: Contém vitamina A, C, E e do complexo B.</p>
+            <p>- Minerais: Rico em potássio, cálcio, ferro, magnésio, entre outros.</p>
+            - Antioxidantes: Protegem contra danos celulares e envelhecimento.</p>
+        </section>
+
+        <section class="location-map">
+            <h2>Localização</h2>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.867907944224!2d-53.48289158495362!3d-26.032423283507898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f786793dbba15d%3A0xcdbf220f61961cc4!2sPinhal%20de%20S%C3%A3o%20Bento%2C%20PR%2C%2085625-000!5e0!3m2!1sen!2sbr!4v1624381668522!5m2!1sen!2sbr" width="315" height="236" style="border:1px solid #ccc; border-radius: 5px;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>FarmCity Connect </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Botão Voltar
+            const backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', () => {
+                window.location.href = 'loja.html';
+            });
+
+            // Botão Compre Agora
+            const buyNowButton = document.querySelector('.buy-now-button');
+            buyNowButton.addEventListener('click', () => {
+                window.location.href = 'finalizar.html';
+            });
+        });
+    </script>
+</body>
+</html>
