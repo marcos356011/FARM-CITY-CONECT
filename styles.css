@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Cabeçalho */
@@ -16,14 +19,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.logo-container {
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo {
+.logo img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -36,111 +41,100 @@ h1 {
     color: #fff;
 }
 
-.menu-btn, .back-btn {
+.menu-hamburguer {
     background-color: transparent;
-    color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+}
+
+.menu-hamburguer span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    display: block;
 }
 
 /* Menu Hambúrguer */
 #menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background-color: #42b883;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 #menu a {
     color: #fff;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-left: 20px;
 }
 
-#menu.active {
+/* Slider */
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.slides {
     display: flex;
 }
 
-/* Grade de Produtos */
-main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.slides img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Seção de Recursos */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
 }
 
-.produto {
+.feature-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza o conteúdo dentro do .produto */
 }
 
-.produto a {
-    display: block; /* Transforma o link em bloco para ocupar todo o espaço do .produto */
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: black; /* Define a cor do texto para preto */
+.feature-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-.produto img {
-    width: 100%;
-    border-radius: 10px;
+.feature-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #42b883;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
     cursor: pointer;
 }
 
-.produto p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333; /* Cor do texto abaixo da imagem */
-}
-
 /* Rodapé */
-.rodape {
-    height: 10px;
+footer {
     width: 100%;
-    background-color: green;
+    max-width: 1200px;
+    text-align: center;
+    padding: 10px;
+    background-color: #42b883;
+    color: #fff;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-}
-/* Animação do Título Piscante */
-@keyframes blink {
-    0%, 100% { color: initial; }
-    50% { color: #00ff00; } /* Verde brilhante */
-}
-
-.blinking-title {
-    font-size: 2em;
-    text-align: center;
-    animation: blink 1s infinite;
-    margin: 20px 0;
-}
-
-/* Texto Informativo */
-.informativo {
-    text-align: center;
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Tornar o layout flexível */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Imagens responsivas */
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Menu responsivo */
@@ -163,7 +157,7 @@ img {
         top: 60px;
         right: 0;
         width: 100%;
-        background-color: #4CAF50;
+        background-color: #42b883;
     }
 
     nav ul {
