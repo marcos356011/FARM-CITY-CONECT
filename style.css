@@ -1,0 +1,192 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #42b883;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.menu-hamburguer {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+}
+
+.menu-hamburguer span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    display: block;
+}
+
+/* Menu Hambúrguer */
+#menu {
+    display: flex;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    justify-content: center; /* Alinha as imagens ao centro */
+}
+
+.slides img {
+    width: 100%;
+    max-width: 80%; /* Ajusta a largura máxima das imagens */
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Seção de Recursos */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #42b883;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 10px;
+    background-color: #42b883;
+    color: #fff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.show {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #42b883;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .slider, .intro, .features {
+        padding: 1rem;
+    }
+}
+
+/* Ajustes gerais */
+header, footer, main {
+    width: 100%;
+    max-width: 1200px;
+}
