@@ -10,7 +10,7 @@
     </div>
     <div style="max-width: 800px; margin: 20px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         <div style="text-align: center; margin-bottom: 20px;">
-            <img src="BackgroundEraser_20240609_233949471.png" alt="FarmCity Connect" style="max-width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="logo.png" alt="FarmCity Connect" style="max-width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
         </div>
         <h2>Instruções de Uso da FarmCity Connect</h2>
         <p>Bem-vindo à FarmCity Connect! Esta plataforma foi criada para facilitar a conexão entre produtores rurais e famílias urbanas...</p>
