@@ -19,16 +19,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1200px; /* Garante que o cabeçalho não exceda o tamanho máximo */
     width: 100%;
-    max-width: 1200px;
 }
 
-.logo {
+.logo-container {
     display: flex;
     align-items: center;
 }
 
-.logo img {
+.logo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -41,100 +41,108 @@ h1 {
     color: #fff;
 }
 
-.menu-hamburguer {
+.menu-btn, .back-btn {
     background-color: transparent;
+    color: #fff;
     border: none;
     cursor: pointer;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-}
-
-.menu-hamburguer span {
-    background-color: #fff;
-    height: 3px;
-    width: 100%;
-    display: block;
+    font-size: 16px;
 }
 
 /* Menu Hambúrguer */
 #menu {
-    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: #42b883;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #menu a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
-/* Slider */
-.slider {
-    width: 100%;
-    max-width: 1200px;
-    overflow: hidden;
-}
-
-.slides {
+#menu.active {
     display: flex;
 }
 
-.slides img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-/* Seção de Recursos */
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* Grade de Produtos */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     padding: 20px;
+    max-width: 1000px; /* Ajuste o tamanho do conteúdo */
+    width: 100%;
 }
 
-.feature-item {
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    margin: 10px;
-    text-align: center;
+.produto {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo dentro do .produto */
 }
 
-.feature-icon {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
+.produto a {
+    display: block; /* Transforma o link em bloco para ocupar todo o espaço do .produto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: black; /* Define a cor do texto para preto */
 }
 
-.feature-item button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #42b883;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
+.produto img {
+    width: 80%; /* Ajusta o tamanho da imagem */
+    max-width: 300px; /* Limita o tamanho máximo */
+    border-radius: 10px;
     cursor: pointer;
 }
 
+.produto p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333; /* Cor do texto abaixo da imagem */
+}
+
 /* Rodapé */
-footer {
+.rodape {
+    height: 10px;
     width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    padding: 10px;
-    background-color: #42b883;
-    color: #fff;
+    background-color: green;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+/* Animação do Título Piscante */
+@keyframes blink {
+    0%, 100% { color: initial; }
+    50% { color: #00ff00; } /* Verde brilhante */
+}
+
+.blinking-title {
+    font-size: 2em;
+    text-align: center;
+    animation: blink 1s infinite;
+    margin: 20px 0;
+}
+
+/* Texto Informativo */
+.informativo {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Menu responsivo */
@@ -143,49 +151,19 @@ footer {
         flex-direction: column;
     }
 
-    .menu-hamburguer {
-        display: flex;
-    }
-
-    nav {
-        display: none;
-    }
-
-    nav.show {
-        display: block;
-        position: absolute;
+    #menu {
         top: 60px;
         right: 0;
         width: 100%;
-        background-color: #42b883;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav ul li {
-        text-align: center;
-        padding: 1rem;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .logo img {
-        height: 80px;
-    }
-
-    .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    .slider, .intro, .features {
-        padding: 1rem;
+    #menu a {
+        margin-bottom: 5px;
     }
 }
 
 /* Ajustes gerais */
-header, footer, main {
+header, .rodape, main {
     width: 100%;
     max-width: 1200px;
 }
