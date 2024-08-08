@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm City</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        window.onload = function() {
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        };
+    </script>
+    <style>
+        /* Estilo para garantir a visibilidade do ícone do VLibras */
+        #vlibras-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999; /* Garante que o widget esteja acima de outros elementos */
+        }
+
+        /* Estilos para as features */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os itens */
+            gap: 20px; /* Espaço entre os itens */
+            padding: 20px; /* Adiciona um pouco de padding ao redor */
+        }
+
+        .feature-item {
+            flex: 1 1 calc(33.333% - 40px); /* Itens com largura de 33% menos o gap total (2x20px) */
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 100px; /* Exemplo de tamanho da imagem */
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Widget do VLibras -->
+    <div id="vlibras-container"></div>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo da Farm City">
+            <h1>FARM CITY CONECT</h1>
+        </div>
+        <div class="menu-hamburguer" id="menu-toggle" aria-label="Abrir menu de navegação" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu" role="navigation" aria-label="Menu principal">
+            <ul>
+                <li><a href="produtores.html" aria-label="Ir para Produtores">Produtores</a></li>
+                <li><a href="loja.html" aria-label="Ir para Loja Virtual">Loja Virtual</a></li>
+                <li><a href="receitas.html" aria-label="Ir para Receitas">Receitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slider" aria-live="polite">
+            <div class="slides">
+                <img src="imagem1.jpg" alt="Descrição da Imagem 1">
+                <img src="imagem2.jpg" alt="Descrição da Imagem 2">
+                <img src="imagem3.jpg" alt="Descrição da Imagem 3">
+                <img src="imagem4.jpg" alt="Descrição da Imagem 4">
+                <img src="imagem5.jpg" alt="Descrição da Imagem 5">
+            </div>
+        </div>
+        <div class="intro">
+            <h2 class="welcome">Bem-vindos</h2>
+            <h3>Conheça Nossa Página</h3>
+            <p>Bem-vindo à FarmCity Connect! Esta plataforma tem como objetivo conectar produtores rurais e consumidores, promovendo a venda direta de produtos frescos e de qualidade. Aqui você encontra:</p>
+        </div>
+        <section class="features">
+            <!-- Primeira fila de 3 itens -->
+            <div class="feature-item" tabindex="0">
+                <img src="lojavirtual.png" alt="Ícone da Loja Virtual" class="feature-icon">
+                <h4>Loja Virtual</h4>
+                <button onclick="window.open('loja.html', '_blank')">Conheça</button>
+            </div>
+            <div class="feature-item" tabindex="0">
+                <img src="produtores.png" alt="Ícone dos Produtores" class="feature-icon">
+                <h4>Produtores</h4>
+                <button onclick="window.open('produtores.html', '_blank')">Conheça</button>
+            </div>
+            <div class="feature-item" tabindex="0">
+                <img src="receitas.png" alt="Ícone das Receitas" class="feature-icon">
+                <h4>Receitas</h4>
+                <button onclick="window.open('receitas.html', '_blank')">Conheça</button>
+            </div>
+            <!-- Segunda fila de 3 itens -->
+            <div class="feature-item" tabindex="0">
+                <img src="mapainterativo.png" alt="Ícone do Mapa Interativo" class="feature-icon">
+                <h4>Mapa Interativo</h4>
+                <button onclick="window.open('mapa.html', '_blank')">Conheça</button>
+            </div>
+            <div class="feature-item" tabindex="0">
+                <img src="imagem50.jpg" alt="Ícone Adicional dos Produtores" class="feature-icon">
+                <h4>Nova Função Produtores</h4>
+                <button onclick="window.open('agenda.html', '_blank')">Conheça</button>
+            </div>
+            <div class="feature-item" tabindex="0">
+                <img src="imagem59.png" alt="Ícone Adicional do Mapa Interativo" class="feature-icon">
+                <h4>Nova Função Mapa</h4>
+                <button onclick="window.open('calendário.html', '_blank')">Conheça</button>
+            </div>
+        </section>
+        <div id="mapa" aria-label="Mapa Interativo">
+            <!-- Seu conteúdo do mapa aqui -->
+        </div>
+        <div class="additional-info">
+            <p>A FarmCity Connect é uma iniciativa inovadora que visa a melhorar a conexão entre produtores rurais e consumidores finais, facilitando o acesso a produtos frescos e de qualidade.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 FarmCity Connect.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
