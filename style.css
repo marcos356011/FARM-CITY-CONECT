@@ -30,14 +30,14 @@
 .feature-item img {
     width: 200px; /* Aumentado para melhorar a visualização */
     height: auto;
-    border-radius: 100px;
+    border-radius: 200px;
 }
 
 .feature-item button {
     background-color: #4CAF50;
     border: none;
     color: #ffffff;
-    padding: 12px 12px; /* Ajustado para melhor alinhamento */
+    padding: 12px 22px; /* Ajustado para melhor alinhamento */
     border-radius: 10px;
     cursor: pointer;
     font-size: 1rem; /* Ajustado para melhorar a visibilidade */
