@@ -13,7 +13,7 @@
     gap: 3000px; /* Espaço aumentado para px */
     justify-items: center;
     margin-top: 2rem;
-    margin-left: 100px; /* Ajustado para aumentar a margem do lado esquerdo */
+    margin-left: 100px; /* Margem diminuída para 100px do lado esquerdo */
     padding-left: 500px; /* Aumentado para 500px do lado esquerdo */
     padding-right: 500px; /* Aumentado para 500px do lado direito */
 }
