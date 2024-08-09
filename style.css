@@ -30,7 +30,7 @@
 .feature-item img {
     width: 200px; /* Aumentado para melhorar a visualização */
     height: auto;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 .feature-item button {
