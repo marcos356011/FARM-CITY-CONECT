@@ -25,6 +25,8 @@
 
 .feature-item {
     text-align: center;
+    max-width: 100%;
+            height: auto;
 }
 
 .feature-item img {
